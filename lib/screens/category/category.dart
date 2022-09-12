@@ -7,6 +7,14 @@ class ScreenCategory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Center(child: Text("Category"));
+    return  Column(
+      children: [
+        TabBar(tabs: [
+          Tab(child: Text("pageOne"),
+          ),
+        Tab(child: Text("pageTwo"),)
+        ])
+      ],
+    );
   }
 }

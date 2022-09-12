@@ -15,13 +15,29 @@ static ValueNotifier<int> selectedIndexNotifier = ValueNotifier(0);
 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[100],
+      appBar: AppBar(
+        title: Text("MONEY MANAGER"),
+        centerTitle: true,
+      ),
       bottomNavigationBar: MoneyManagerBottomNavigation(),
       body: SafeArea(child: ValueListenableBuilder(
         valueListenable: selectedIndexNotifier,
         builder: (BuildContext, int index, Widget?_) {
           return pages[index];
         }
-      )),
+      ),),
+      floatingActionButton: FloatingActionButton(onPressed: (){
+       if(selectedIndexNotifier.value == 0){
+         print("pageOne");
+       }else if(selectedIndexNotifier.value == 1){
+         print("pageTwo");
+       }
+
+
+      },
+      child: Icon(Icons.add,color: Colors.white,),
+      ),
     );
   }
 }
