@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:hiveproject/db/category/category_db.dart';
 import 'package:hiveproject/screens/category/expense_category_list.dart';
 import 'package:hiveproject/screens/category/income_category_list.dart';
 
@@ -16,6 +17,9 @@ late TabController _tabController;
 @override
   void initState() {
     _tabController = TabController(length: 2, vsync: this);
+    CategoryDB().getCategories().then((value) {
+      print(value);
+    });
     super.initState();
   }
   @override
