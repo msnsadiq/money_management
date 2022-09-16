@@ -14,7 +14,7 @@ class MoneyManagerBottomNavigation extends StatelessWidget {
           type: BottomNavigationBarType.fixed,
           currentIndex: selectedIndex,
             onTap: (value){
-            //print({"OOOOOOOOO $value"});
+
               ScreenHome.selectedIndexNotifier.value = value;
             },
             items: [

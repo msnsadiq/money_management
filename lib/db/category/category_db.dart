@@ -4,7 +4,7 @@ import '../../models/category/category_model.dart';
 const CATEGORY_DB_NAME = "category_database";
 
 abstract class CategoryDbFunction {
-Future<  List<CategoryModel>>getCategories();
+Future<List<CategoryModel>>getCategories();
   Future<void> InsertCategory(CategoryModel value);
 }
 

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hiveproject/screens/category/category.dart';
+import 'package:hiveproject/db/category/category_db.dart';
+import 'package:hiveproject/models/category/category_model.dart';
+import 'package:hiveproject/screens/category/category_add_popup.dart';
+import 'package:hiveproject/screens/category/home_categories.dart';
 import 'package:hiveproject/screens/home/widgets/bottom_navigation.dart';
 import 'package:hiveproject/screens/transactions/transaction.dart';
 
@@ -32,6 +35,11 @@ static ValueNotifier<int> selectedIndexNotifier = ValueNotifier(0);
          print("pageOne");
        }else if(selectedIndexNotifier.value == 1){
          print("pageTwo");
+
+     showCategoryAddPopup(context);
+
+         // final details = CategoryModel(id: DateTime.now().microsecondsSinceEpoch.toString(), name: "Travel", type:CatergoryType.expense );
+         // CategoryDB().InsertCategory(details);
        }
 
 

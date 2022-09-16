@@ -6,7 +6,9 @@ import 'package:hiveproject/screens/category/expense_category_list.dart';
 import 'package:hiveproject/screens/category/income_category_list.dart';
 
 class ScreenCategory extends StatefulWidget {
-  const ScreenCategory({Key? key}) : super(key: key);
+  const
+
+  ScreenCategory({Key? key}) : super(key: key);
 
   @override
   State<ScreenCategory> createState() => _ScreenCategoryState();
@@ -18,7 +20,8 @@ late TabController _tabController;
   void initState() {
     _tabController = TabController(length: 2, vsync: this);
     CategoryDB().getCategories().then((value) {
-      print(value);
+      print("checking category");
+      print(value.toString());
     });
     super.initState();
   }
